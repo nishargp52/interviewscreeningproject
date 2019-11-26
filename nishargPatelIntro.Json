@@ -1,0 +1,25 @@
+{
+	"Nishargpatel": {
+		"workExperience": {
+			"CIBC": {
+				"title": "Senior QA analyst",
+				"duration": "1 year"
+			},
+			"Engage People Inc": {
+				"Title": "QA analyst",
+				"duration": "1.5 years"
+			},
+			"CIBC1": {
+				"Title": "QA analyst",
+				"duration": "2.5 years"
+			}
+		},
+		"Hobbies": [
+			"badminton",
+			"cricket",
+			"ping pong",
+			"video games"
+		]
+	}
+}
+   
