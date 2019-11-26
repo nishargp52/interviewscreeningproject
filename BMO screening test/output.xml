@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191125 22:51:28.069" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/nishargpatel/Desktop/robotFrameworkTutorial/BMO screening test" id="s1" name="BMO screening test">
+<suite source="/Users/nishargpatel/Desktop/robotFrameworkTutorial/BMO screening test/Scripts" id="s1-s1" name="Scripts">
+<suite source="/Users/nishargpatel/Desktop/robotFrameworkTutorial/BMO screening test/Scripts/TestCases.robot" id="s1-s1-s1" name="TestCases">
+<test id="s1-s1-s1-t1" name="Search For restaurents in the area based on Cuisine category">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open application</arg>
+</arguments>
+<kw name="Open application" library="WebCommon">
+<doc>keyword to open the application</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${ENV_URL}</arg>
+<arg>${ENV_BROWSER}</arg>
+</arguments>
+<msg timestamp="20191125 22:51:28.223" level="INFO">Opening browser 'safari' to base url 'https://www.just-eat.co.uk'.</msg>
+<status status="PASS" endtime="20191125 22:51:31.317" starttime="20191125 22:51:28.222"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191125 22:51:31.356" starttime="20191125 22:51:31.321"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20191125 22:51:36.359" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191125 22:51:36.360" starttime="20191125 22:51:31.357"></status>
+</kw>
+<status status="PASS" endtime="20191125 22:51:36.360" starttime="20191125 22:51:28.222"></status>
+</kw>
+<status status="PASS" endtime="20191125 22:51:36.361" starttime="20191125 22:51:28.221"></status>
+</kw>
+<kw name="Verify HomePage is displayed" library="JustEatHomePage">
+<doc>To verify user is on the homepage</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'Log in')]</arg>
+<arg>3s</arg>
+<arg>Homepage is not displayed</arg>
+</arguments>
+<status status="PASS" endtime="20191125 22:51:36.382" starttime="20191125 22:51:36.362"></status>
+</kw>
+<status status="PASS" endtime="20191125 22:51:36.382" starttime="20191125 22:51:36.361"></status>
+</kw>
+<kw name="Select a Cuisine category" library="JustEatHomePage">
+<doc>Selecting a cuisine category from the list based on iput</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,1500)</arg>
+</arguments>
+<msg timestamp="20191125 22:51:36.384" level="INFO">Executing JavaScript:
+window.scrollTo(0,1500)
+Without any arguments.</msg>
+<status status="PASS" endtime="20191125 22:51:36.389" starttime="20191125 22:51:36.383"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191125 22:51:39.390" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191125 22:51:39.391" starttime="20191125 22:51:36.389"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id="footer-top-cuisines"]//li[1]/a</arg>
+</arguments>
+<msg timestamp="20191125 22:51:39.393" level="INFO">Double clicking element '//ul[@id="footer-top-cuisines"]//li[1]/a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191125 22:51:39.481" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191125 22:51:39.482" starttime="20191125 22:51:39.405"></status>
+</kw>
+<msg timestamp="20191125 22:51:39.483" level="FAIL">MoveTargetOutOfBoundsException: Message: 
+</msg>
+<status status="FAIL" endtime="20191125 22:51:39.483" starttime="20191125 22:51:39.392"></status>
+</kw>
+<status status="FAIL" endtime="20191125 22:51:39.484" starttime="20191125 22:51:36.383"></status>
+</kw>
+<kw type="teardown" name="Close application" library="WebCommon">
+<doc>Keyword to close application</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191125 22:51:39.555" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191125 22:51:39.555" starttime="20191125 22:51:39.485"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20191125 22:51:39.595" starttime="20191125 22:51:39.556"></status>
+</kw>
+<status status="PASS" endtime="20191125 22:51:39.596" starttime="20191125 22:51:39.484"></status>
+</kw>
+<doc>Test case to search a list of restaurents in an area based on cuisine</doc>
+<status status="FAIL" endtime="20191125 22:51:39.596" critical="yes" starttime="20191125 22:51:28.220">MoveTargetOutOfBoundsException: Message: 
+</status>
+</test>
+<doc>This contains my sample test case</doc>
+<status status="FAIL" endtime="20191125 22:51:39.598" starttime="20191125 22:51:28.113"></status>
+</suite>
+<status status="FAIL" endtime="20191125 22:51:39.602" starttime="20191125 22:51:28.111"></status>
+</suite>
+<status status="FAIL" endtime="20191125 22:51:39.607" starttime="20191125 22:51:28.092"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="BMO screening test" pass="0">BMO screening test</stat>
+<stat fail="1" id="s1-s1" name="Scripts" pass="0">BMO screening test.Scripts</stat>
+<stat fail="1" id="s1-s1-s1" name="TestCases" pass="0">BMO screening test.Scripts.TestCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
